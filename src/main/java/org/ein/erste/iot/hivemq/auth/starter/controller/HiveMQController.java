@@ -19,6 +19,10 @@ public class HiveMQController {
 
     private final HiveMQAuthentificationService hiveMQAuthentificationService;
 
+    //todo tcp connection
+    //mvc config
+    //auth for controller
+    //configs
     @PostMapping(value = "/authorize")
     public Response<Boolean> authorize(@RequestBody AuthorizeRequest request) {
         return Response.of(hiveMQAuthentificationService.authorize(request.login(), request.topic()));

@@ -26,5 +26,8 @@ public class IoTDevice {
 
     private Date certificateExpiration;
 
+    @Builder.Default
+    private boolean blacklisted = false;
+
     private Set<String> topics = new HashSet<>();
 }
