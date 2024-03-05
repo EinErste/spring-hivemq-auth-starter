@@ -2,7 +2,7 @@ package org.ein.erste.iot.hivemq.auth.starter.service;
 
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
-import org.ein.erste.iot.hivemq.auth.starter.service.crud.IoTDeviceCrudService;
+import org.ein.erste.iot.hivemq.auth.starter.service.device.crud.IoTDeviceCrudService;
 import org.ein.erste.iot.hivemq.auth.starter.settings.HiveMQServerCredentialsConfig;
 import org.springframework.stereotype.Service;
 

@@ -10,6 +10,7 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 public class HiveMQServerCredentialsConfig {
+    private String domain;
     private String login;
     private String password;
 }

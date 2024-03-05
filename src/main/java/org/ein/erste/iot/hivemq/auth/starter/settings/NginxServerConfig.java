@@ -9,7 +9,7 @@ import lombok.NoArgsConstructor;
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
-public class AESConfig {
-    private String base64EncodedKey;
-    private String base64EncodedKeyFactory;
+public class NginxServerConfig {
+    private String authToken;
+    private String urlAddCertificate;
 }

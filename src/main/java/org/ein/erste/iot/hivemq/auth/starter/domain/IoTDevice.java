@@ -13,7 +13,6 @@ import java.util.UUID;
 @AllArgsConstructor
 @Builder
 public class IoTDevice {
-    private UUID id;
     private String serialNumber;
 
     private String mqttLogin;
