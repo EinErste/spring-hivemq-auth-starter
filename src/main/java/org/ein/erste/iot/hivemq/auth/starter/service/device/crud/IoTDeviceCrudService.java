@@ -3,7 +3,6 @@ package org.ein.erste.iot.hivemq.auth.starter.service.device.crud;
 import org.ein.erste.iot.hivemq.auth.starter.domain.IoTDevice;
 
 import java.util.Optional;
-import java.util.UUID;
 
 public interface IoTDeviceCrudService {
 

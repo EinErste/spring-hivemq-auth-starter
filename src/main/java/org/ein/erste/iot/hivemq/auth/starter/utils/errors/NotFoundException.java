@@ -6,8 +6,6 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 @Data
-@AllArgsConstructor
-@NoArgsConstructor
 public class NotFoundException extends BasicException{
 
     public NotFoundException(String message) {

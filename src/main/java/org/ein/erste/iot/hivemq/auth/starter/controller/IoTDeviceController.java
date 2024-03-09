@@ -3,7 +3,6 @@ package org.ein.erste.iot.hivemq.auth.starter.controller;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.ein.erste.iot.hivemq.auth.starter.domain.IoTDeviceSecret;
-import org.ein.erste.iot.hivemq.auth.starter.service.HiveMQAuthentificationService;
 import org.ein.erste.iot.hivemq.auth.starter.service.device.init.IoTDeviceService;
 import org.ein.erste.iot.hivemq.auth.starter.utils.DeviceAuthorizeResponse;
 import org.ein.erste.iot.hivemq.auth.starter.utils.Response;

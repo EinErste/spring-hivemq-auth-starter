@@ -1,4 +1,4 @@
-package org.ein.erste.iot.hivemq.auth.starter.settings;
+package org.ein.erste.iot.hivemq.auth.starter.settings.config;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -13,4 +13,5 @@ public class HiveMQServerCredentialsConfig {
     private String domain;
     private String login;
     private String password;
+    private String apiToken;
 }

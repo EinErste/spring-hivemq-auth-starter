@@ -1,4 +1,4 @@
-package org.ein.erste.iot.hivemq.auth.starter.settings;
+package org.ein.erste.iot.hivemq.auth.starter.settings.config;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;

@@ -1,9 +1,7 @@
 package org.ein.erste.iot.hivemq.auth.starter.utils.errors;
 
 import jakarta.servlet.http.HttpServletResponse;
-import lombok.AllArgsConstructor;
 import lombok.Data;
-import lombok.NoArgsConstructor;
 
 @Data
 public class ForbiddenException extends BasicException{
