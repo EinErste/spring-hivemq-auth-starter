@@ -44,8 +44,8 @@ public class WebSecurity {
                 .sessionManagement(session -> session.sessionCreationPolicy(SessionCreationPolicy.STATELESS));
         http.authorizeHttpRequests(auth -> auth.requestMatchers("/error").permitAll());
         http.authorizeHttpRequests(auth -> auth
-                .requestMatchers(HttpMethod.POST, "/api/iot/device/credentials").permitAll()
-                .requestMatchers(HttpMethod.POST, "/api/iot/device/certificate").permitAll()
+                .requestMatchers(HttpMethod.GET, "/api/iot/device/credentials").permitAll()
+                .requestMatchers(HttpMethod.GET, "/api/iot/device/certificate").permitAll()
                 .anyRequest().authenticated()
         );
         http.addFilterBefore(hiveMQAuthFilter, UsernamePasswordAuthenticationFilter.class);

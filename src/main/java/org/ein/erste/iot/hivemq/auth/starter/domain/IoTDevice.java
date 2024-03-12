@@ -20,10 +20,6 @@ public class IoTDevice {
 
     private Date mqttCredentialsLastRotation;
 
-    private byte[] certificate;
-
-    private Date certificateExpiration;
-
     @Builder.Default
     private boolean blacklisted = false;
 
