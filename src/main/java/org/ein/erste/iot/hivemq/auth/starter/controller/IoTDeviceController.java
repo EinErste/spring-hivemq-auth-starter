@@ -24,8 +24,8 @@ public class IoTDeviceController {
     private final NginxConfig nginxConfig;
 
     @GetMapping(value = "/credentials")
-    public Response<DeviceAuthorizeResponse> getCredentials(@RequestParam("serial_number") String deviceSecret) {
-        return Response.of(iotDeviceService.getCredentials(deviceSecret));
+    public Response<DeviceAuthorizeResponse> getCredentials(@RequestParam("serial_number") String serialNumber) {
+        return Response.of(iotDeviceService.getCredentials(serialNumber));
     }
 
     @GetMapping(value = "/certificate")

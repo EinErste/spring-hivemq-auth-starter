@@ -25,22 +25,21 @@ public class HiveMQController {
 
     private final HiveMQAuthentificationService hiveMQAuthentificationService;
 
-    //mvc config auth for controller
     @PostMapping(value = "/authorize")
-    public Response<Boolean> authorize(@RequestBody AuthorizeRequest request) {
+    public Boolean authorize(@RequestBody AuthorizeRequest request) {
         if (!SecurityContextHolder.getContext().getAuthentication().getAuthorities().contains(new HiveMQAuthority()))
             throw new ForbiddenException();
 
-        return Response.of(hiveMQAuthentificationService.authorize(request.login(), request.topic()));
+        return hiveMQAuthentificationService.authorize(request.login(), request.topic());
     }
 
 
     @PostMapping(value = "/authenticate")
-    public Response<Boolean> authenticate(@RequestBody AuthenticateRequest request) {
+    public Boolean authenticate(@RequestBody AuthenticateRequest request) {
         if (!SecurityContextHolder.getContext().getAuthentication().getAuthorities().contains(new HiveMQAuthority()))
             throw new ForbiddenException();
 
-        return Response.of(hiveMQAuthentificationService.authenticate(request.login(), request.password()));
+        return hiveMQAuthentificationService.authenticate(request.login(), request.password());
     }
 
 

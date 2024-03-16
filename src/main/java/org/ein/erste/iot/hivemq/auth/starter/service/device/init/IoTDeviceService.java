@@ -19,7 +19,6 @@ public abstract class IoTDeviceService {
     public DeviceAuthorizeResponse getCredentials(String serialNumber) {
         if (canReturnCredentials(serialNumber)) throw new ForbiddenException();
         var device = iotDeviceCrudService.findBySerialNumber(serialNumber).orElseGet(() -> createDevice(serialNumber));
-        if (device.isBlacklisted()) throw new ForbiddenException();
         return new DeviceAuthorizeResponse(mqttCredentialsConfig.getDomain(), device.getMqttLogin(), device.getMqttPassword());
     }
 
