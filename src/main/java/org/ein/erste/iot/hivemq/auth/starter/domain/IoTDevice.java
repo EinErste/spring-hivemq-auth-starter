@@ -24,4 +24,8 @@ public class IoTDevice {
     private boolean blacklisted = false;
 
     private Set<String> topics = new HashSet<>();
+
+    public boolean hasCredentials(){
+        return mqttLogin != null && mqttPassword != null;
+    }
 }

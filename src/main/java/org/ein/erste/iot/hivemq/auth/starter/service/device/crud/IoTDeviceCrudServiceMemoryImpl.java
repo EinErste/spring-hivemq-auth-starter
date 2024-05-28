@@ -16,10 +16,10 @@ public class IoTDeviceCrudServiceMemoryImpl implements IoTDeviceCrudService {
     private Map<String, IoTDevice> devicesSerial = new ConcurrentHashMap<>();
     private Map<String, IoTDevice> devicesLogin = new ConcurrentHashMap<>();
     @Override
-    public boolean save(IoTDevice device) {
+    public IoTDevice save(IoTDevice device) {
         devicesSerial.put(device.getSerialNumber(), device);
         devicesLogin.put(device.getMqttLogin(), device);
-        return true;
+        return device;
     }
 
     @Override

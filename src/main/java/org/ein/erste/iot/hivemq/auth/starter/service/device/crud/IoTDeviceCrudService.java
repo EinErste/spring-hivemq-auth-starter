@@ -5,8 +5,7 @@ import org.ein.erste.iot.hivemq.auth.starter.domain.IoTDevice;
 import java.util.Optional;
 
 public interface IoTDeviceCrudService {
-
-    boolean save(IoTDevice device);
+    IoTDevice save(IoTDevice device);
     boolean deleteBySerialNumber(String serialNumber);
     Optional<IoTDevice> findBySerialNumber(String serialNumber);
     Optional<IoTDevice> findByMqttLogin(String mqttLogin);
